@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
+   <children>
+      <Rectangle fill="WHITE" height="800.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+      <Rectangle fill="#f7cc2a" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+      <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="-14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/red%20logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="204.0" layoutY="-1.0" prefHeight="108.0" prefWidth="155.0" text="Category" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="361.0" layoutY="-2.0" prefHeight="108.0" prefWidth="155.0" text="Product" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="516.0" layoutY="-2.0" prefHeight="108.0" prefWidth="155.0" text="Manage" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="40.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Display" wrappingWidth="311.47008514404297">
+         <font>
+            <Font name="Gill Sans MT" size="40.0" />
+         </font>
+      </Text>
+      <VBox alignment="CENTER" layoutX="206.0" layoutY="288.0" prefHeight="31.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="img" fitHeight="376.0" fitWidth="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/beverages/frozenfanta.jpg" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="25.0" prefWidth="262.0">
+               <children>
+                  <Label fx:id="nameLabel" prefHeight="38.0" prefWidth="247.0" text="WanPiece Chicken">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceLabel" prefHeight="46.0" prefWidth="68.0" text="₱ 99.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="805.0" layoutY="108.0" prefHeight="693.0" prefWidth="738.0" style="-fx-background-color: red;">
+         <children>
+            <TextField layoutX="250.0" layoutY="173.0" prefHeight="52.0" prefWidth="441.0" />
+            <TextField layoutX="250.0" layoutY="288.0" prefHeight="52.0" prefWidth="441.0" />
+            <TextField layoutX="250.0" layoutY="403.0" prefHeight="52.0" prefWidth="441.0" />
+            <Text fill="WHITE" layoutX="78.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="290.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Everything" wrappingWidth="270.9999755859375">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="78.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="78.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="RED" height="48.0" layoutX="81.0" layoutY="598.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
+            <JFXButton layoutX="78.0" layoutY="594.0" onMousePressed="#cancelButton" prefHeight="56.0" prefWidth="221.0" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans MT" size="30.0" />
+               </font>
+            </JFXButton>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="48.0" layoutX="474.0" layoutY="598.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
+            <JFXButton layoutX="471.0" layoutY="594.0" onMousePressed="#cancelButton" prefHeight="56.0" prefWidth="221.0" text="Save" textFill="GREEN">
+               <font>
+                  <Font name="Gill Sans MT" size="30.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
