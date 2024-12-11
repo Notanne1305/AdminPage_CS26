@@ -1,5 +1,6 @@
 package org.example.adminpage;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,11 @@ public class LogInCont {
 
     @FXML
     private TextField UsernameTF;
+
+    @FXML
+    public void initilize(){
+        Platform.runLater(() -> LogInBtn.requestFocus());
+    }
 
     @FXML
     void handleLogIn(ActionEvent event) {
