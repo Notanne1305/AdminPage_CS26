@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.Stocks">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1544.0">
+         <children>
+            <JFXButton layoutX="32.0" layoutY="598.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Sides">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="32.0" layoutY="522.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Desserts">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="31.0" layoutY="446.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Breakfast Menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="31.0" layoutY="370.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Burgers">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="31.0" layoutY="293.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Chicken">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="31.0" layoutY="216.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="All time favourites">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="103.0" layoutY="158.0" prefHeight="48.0" prefWidth="142.0" text="Categories">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView layoutX="357.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0">
+              <columns>
+                <TableColumn prefWidth="450.0" text="Item Name" />
+                <TableColumn prefWidth="250.0" text="Stocks" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </children>
+</StackPane>
