@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.Dashboard">
+   <children>
+      <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+      <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picbank/logo%202.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="371.0" layoutY="1.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="185.0" layoutY="4.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="556.0" layoutY="1.0" prefHeight="108.0" prefWidth="185.0" text="Stocks" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="164.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="104.0" pannable="true" prefHeight="805.0" prefWidth="1544.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1722.0" prefWidth="1544.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="45.0" fill="#d9eafd" height="361.0" layoutX="829.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="683.0" />
+                  <ImageView fitHeight="523.0" fitWidth="866.0" layoutX="51.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/thankyou.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#18344c" layoutX="52.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THERE IS MCLUXIBEE, THERE IS FUN!" wrappingWidth="1747.4701232910156">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="60.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#18344c" layoutX="944.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Since 2024, our fast-food chain has been a beacon of happiness and exceptional service, delighting customers with mouthwatering meals and warm, friendly smiles. From the very beginning, we’ve been committed to creating a welcoming atmosphere where families and friends can come together to enjoy quality food at great value. Our dedication to speed, accuracy, and customer satisfaction has made us a trusted favorite in the community. Whether it’s a quick bite during a busy day or a celebration of life’s moments, we’ve been here to make every visit memorable and every meal special." textAlignment="JUSTIFY" wrappingWidth="557.603271484375">
+                     <font>
+                        <Font name="Gill Sans MT" size="28.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="508.0" fitWidth="642.0" layoutX="50.0" layoutY="1085.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/Three%20Filipino%20Friends%20Holding%20Fast%20Food%20Bag%20With%20Joy.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="508.0" fitWidth="642.0" layoutX="596.0" layoutY="1083.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/Filipino%20Family%20Joyfully%20Celebrating%20With%20Fast%20Food%20Bag.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="504.0" fitWidth="350.0" layoutX="1142.0" layoutY="1084.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/Filipino%20Individual%20Joyfully%20Smiling%20While%20Enjoying%20Burger.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="94.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
+                  <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="92.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#18344c" layoutX="182.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MISSION" wrappingWidth="90.67034912109375">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="457.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
+                  <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="455.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#18344c" layoutX="553.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VISION" wrappingWidth="74.67034912109375">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#18344c" layoutX="124.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our mission is to bring joy to every meal by serving delicious, high-quality food with unparalleled speed and care. We strive to create a welcoming environment where customers feel valued and appreciated, fostering connections through outstanding service and a commitment to excellence. Through innovation, teamwork, and dedication, we aim to spread happiness, one meal at a time, while positively impacting the communities we serve." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#18344c" layoutX="484.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To serve happiness in every bite by delivering high-quality, affordable meals with exceptional service. We are committed to creating a welcoming and joyful dining experience, fostering connections within the community, and continuously innovating to exceed customer expectations." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

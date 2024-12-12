@@ -14,31 +14,16 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
    <children>
-      <Rectangle fill="WHITE" height="800.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
-      <Rectangle fill="#f7cc2a" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
-      <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="-14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle fill="#d9eafd" height="800.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+      <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+      <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/red%20logo.png" />
+            <Image url="@../../../picbank/logo%202.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="204.0" layoutY="-1.0" prefHeight="108.0" prefWidth="155.0" text="Category" underline="true">
+      <Text fill="#18344c" layoutX="40.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Display" wrappingWidth="311.47008514404297">
          <font>
-            <Font name="Gill Sans MT Bold" size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="361.0" layoutY="-2.0" prefHeight="108.0" prefWidth="155.0" text="Product" underline="true">
-         <font>
-            <Font name="Gill Sans MT Bold" size="25.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="516.0" layoutY="-2.0" prefHeight="108.0" prefWidth="155.0" text="Manage" underline="true">
-         <font>
-            <Font name="Gill Sans MT Bold" size="25.0" />
-         </font>
-      </JFXButton>
-      <Text layoutX="40.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Display" wrappingWidth="311.47008514404297">
-         <font>
-            <Font name="Gill Sans MT" size="40.0" />
+            <Font name="Gill Sans MT Bold" size="40.0" />
          </font>
       </Text>
       <VBox alignment="CENTER" layoutX="206.0" layoutY="288.0" prefHeight="31.0" prefWidth="200.0">
@@ -64,8 +49,9 @@
             </HBox>
          </children>
       </VBox>
-      <AnchorPane layoutX="805.0" layoutY="108.0" prefHeight="693.0" prefWidth="738.0" style="-fx-background-color: red;">
+      <AnchorPane layoutX="805.0" layoutY="108.0" prefHeight="693.0" prefWidth="738.0" style="-fx-background-color: 18344c;">
          <children>
+            <Rectangle arcHeight="8.0" fill="#18344c" height="695.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="739.0" />
             <TextField layoutX="250.0" layoutY="173.0" prefHeight="52.0" prefWidth="441.0" />
             <TextField layoutX="250.0" layoutY="288.0" prefHeight="52.0" prefWidth="441.0" />
             <TextField layoutX="250.0" layoutY="403.0" prefHeight="52.0" prefWidth="441.0" />
@@ -89,7 +75,6 @@
                   <Font name="Gill Sans MT" size="40.0" />
                </font>
             </Text>
-            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="RED" height="48.0" layoutX="81.0" layoutY="598.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
             <JFXButton layoutX="78.0" layoutY="594.0" onMousePressed="#cancelButton" prefHeight="56.0" prefWidth="221.0" text="Cancel" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT" size="30.0" />
@@ -103,5 +88,20 @@
             </JFXButton>
          </children>
       </AnchorPane>
+      <JFXButton layoutX="371.0" layoutY="1.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="185.0" layoutY="4.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="556.0" layoutY="1.0" prefHeight="108.0" prefWidth="185.0" text="Stocks" textFill="#18344c" underline="true">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
