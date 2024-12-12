@@ -3,6 +3,7 @@ package org.example.adminpage;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 
 public class ManageMenuCont {
@@ -11,10 +12,16 @@ public class ManageMenuCont {
     private JFXButton CategoryBTN;
 
     @FXML
-    private AnchorPane CategoryTable;
+    private AnchorPane CategoryPane;
+
+    @FXML
+    private TableView<?> CategoryTable1;
 
     @FXML
     private JFXButton ProductBTN;
+
+    @FXML
+    private TableView<?> ProductsTable;
 
     @FXML
     private JFXButton addCategoryBTN;
@@ -22,20 +29,19 @@ public class ManageMenuCont {
     @FXML
     private JFXButton addMenuBTN;
 
-
-    private void toggleVisibility(boolean isCategoryVisible) {
-        CategoryTable.setVisible(isCategoryVisible);
-        addCategoryBTN.setVisible(isCategoryVisible);
-        addMenuBTN.setVisible(!isCategoryVisible);
-    }
-
     @FXML
     void showCategoryTable(ActionEvent event) {
-        toggleVisibility(true);
+        CategoryPane.setVisible(true);
+        addCategoryBTN.setVisible(true);
+
     }
 
     @FXML
     void showProductTable(ActionEvent event) {
-        toggleVisibility(false);
+        CategoryPane.setVisible(false);
+        addCategoryBTN.setVisible(false);
+        addMenuBTN.setVisible(true);
+
     }
+
 }
