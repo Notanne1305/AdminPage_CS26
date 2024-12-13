@@ -83,6 +83,7 @@
                   <TableColumn prefWidth="250.0" text="Stocks" />
                </columns>
             </TableView>
+            <JFXButton fx:id="StockBackButton" layoutX="1298.0" layoutY="720.0" onAction="#handleBackDashboard" text="Back" />
          </children></AnchorPane>
    </children>
 </StackPane>

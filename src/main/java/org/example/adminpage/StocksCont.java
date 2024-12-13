@@ -3,7 +3,12 @@ package org.example.adminpage;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,6 +46,26 @@ public class StocksCont {
     private TableView<?> SidesTable;
 
     private Map<JFXButton, TableView<?>> buttonTableMap;
+
+    @FXML
+    private JFXButton StockBackButton;
+
+    @FXML
+    void handleBackDashboard(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     @FXML
     public void initialize() {
