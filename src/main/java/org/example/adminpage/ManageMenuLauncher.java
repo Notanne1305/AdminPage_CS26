@@ -21,7 +21,7 @@ public class ManageMenuLauncher extends Application {
         this.PrimaryStage = stage;
 
         // Load the FXML file for the login screen
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ManageMenu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stocks.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
         stage.setTitle("ManageMenu");
         stage.setScene(scene);
