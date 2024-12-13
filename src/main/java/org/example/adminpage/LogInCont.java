@@ -37,12 +37,12 @@ public class LogInCont {
         if (UsernameTF.getText().equals(username) && PasswordTF.getText().equals(password)) {
             try {
 
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Category.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
 
                 // Update the primary stage with the new scene
                 Stage stage = new Stage();
-                stage.setTitle("Category Page");
+                stage.setTitle("Dashboard Page");
                 stage.setScene(scene);
                 stage.show();
 
