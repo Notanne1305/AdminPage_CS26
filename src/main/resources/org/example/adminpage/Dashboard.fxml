@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.Dashboard">
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
    <children>
       <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
       <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
@@ -19,7 +19,7 @@
             <Image url="@../../../picbank/logo%202.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="847.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+      <JFXButton fx:id="MenuItemsBTN" layoutX="847.0" layoutY="2.0" onAction="#showMenuItems" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
@@ -29,7 +29,7 @@
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1032.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
+      <JFXButton fx:id="StocksBTN" layoutX="1032.0" onAction="#showStocks" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
@@ -42,7 +42,7 @@
                   <Rectangle fill="#ffffff40" height="512.0" layoutX="8.0" layoutY="13.0" stroke="#bcbcbc" strokeType="INSIDE" strokeWidth="0.0" width="1141.0" />
                   <ImageView fitHeight="426.0" fitWidth="841.0" layoutX="17.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/thankyou.jpg" />
+                        <Image url="@../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/thankyou.jpg" />
                      </image>
                   </ImageView>
                   <Text fill="#18344c" layoutX="17.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THERE IS MCLUXIBEE, THERE IS FUN!" wrappingWidth="1264.2701721191406">
