@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="104.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
+      <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="102.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
+         </image>
+      </ImageView>
+      <Text fill="#18344c" layoutX="192.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MISSION" wrappingWidth="90.67034912109375">
+         <font>
+            <Font name="Gill Sans MT Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="467.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
+      <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="465.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
+         </image>
+      </ImageView>
+      <Text fill="#18344c" layoutX="563.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VISION" wrappingWidth="74.67034912109375">
+         <font>
+            <Font name="Gill Sans MT Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#18344c" layoutX="134.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our mission is to bring joy to every meal by serving delicious, high-quality food with unparalleled speed and care. We strive to create a welcoming environment where customers feel valued and appreciated, fostering connections through outstanding service and a commitment to excellence. Through innovation, teamwork, and dedication, we aim to spread happiness, one meal at a time, while positively impacting the communities we serve." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#18344c" layoutX="494.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To serve happiness in every bite by delivering high-quality, affordable meals with exceptional service. We are committed to creating a welcoming and joyful dining experience, fostering connections within the community, and continuously innovating to exceed customer expectations." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+         <font>
+            <Font name="Gill Sans MT" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

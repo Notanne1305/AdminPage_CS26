@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.Dashboard">
    <children>
       <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
       <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
@@ -17,92 +19,152 @@
             <Image url="@../../../picbank/logo%202.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="MenuItemsBTN" layoutX="371.0" layoutY="1.0" onAction="#showMenuItems" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+      <JFXButton layoutX="847.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="DashboardBTN" layoutX="185.0" layoutY="4.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
+      <JFXButton layoutX="661.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="StocksBTN" layoutX="556.0" layoutY="1.0" onAction="#showStocks" prefHeight="108.0" prefWidth="185.0" text="Stocks" textFill="#18344c" underline="true">
+      <JFXButton layoutX="1032.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="164.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
-      <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="104.0" pannable="true" prefHeight="805.0" prefWidth="1544.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+      <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="104.0" pannable="true" prefHeight="800.0" prefWidth="1544.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1722.0" prefWidth="1544.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1722.0" prefWidth="1544.0" style="-fx-background-color: D9EAFD;">
                <children>
-                  <Rectangle arcHeight="45.0" arcWidth="45.0" fill="#d9eafd" height="361.0" layoutX="829.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="683.0" />
-                  <ImageView fitHeight="523.0" fitWidth="866.0" layoutX="51.0" layoutY="607.0" pickOnBounds="true" preserveRatio="true">
+                  <Rectangle fill="#ffffff40" height="512.0" layoutX="8.0" layoutY="13.0" stroke="#bcbcbc" strokeType="INSIDE" strokeWidth="0.0" width="1141.0" />
+                  <ImageView fitHeight="426.0" fitWidth="841.0" layoutX="17.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/thankyou.jpg" />
                      </image>
                   </ImageView>
-                  <Text fill="#18344c" layoutX="52.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THERE IS MCLUXIBEE, THERE IS FUN!" wrappingWidth="1747.4701232910156">
+                  <Text fill="#18344c" layoutX="17.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THERE IS MCLUXIBEE, THERE IS FUN!" wrappingWidth="1264.2701721191406">
                      <font>
-                        <Font name="Gill Sans MT Bold" size="60.0" />
+                        <Font name="Gill Sans MT Bold Italic" size="51.0" />
                      </font>
                   </Text>
-                  <Text fill="#18344c" layoutX="944.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Since 2024, our fast-food chain has been a beacon of happiness and exceptional service, delighting customers with mouthwatering meals and warm, friendly smiles. From the very beginning, we’ve been committed to creating a welcoming atmosphere where families and friends can come together to enjoy quality food at great value. Our dedication to speed, accuracy, and customer satisfaction has made us a trusted favorite in the community. Whether it’s a quick bite during a busy day or a celebration of life’s moments, we’ve been here to make every visit memorable and every meal special." textAlignment="JUSTIFY" wrappingWidth="557.603271484375">
+                  <Text fill="#18344c" layoutX="860.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Since 2024, our fast-food chain has been a beacon of happiness and exceptional service, delighting customers with mouthwatering meals and warm, friendly smiles. From the very beginning, we’ve been committed to creating a welcoming atmosphere where families and friends can come together to enjoy quality food at great value. Our dedication to speed, accuracy, and customer satisfaction has made us a trusted favorite in the community. Whether it’s a quick bite during a busy day or a celebration of life’s moments, we’ve been here to make every visit memorable and every meal special." textAlignment="JUSTIFY" wrappingWidth="264.80328369140625">
                      <font>
-                        <Font name="Gill Sans MT" size="28.0" />
+                        <Font name="Gill Sans MT" size="19.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="508.0" fitWidth="642.0" layoutX="50.0" layoutY="1085.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="395.0" fitWidth="402.0" layoutX="20.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../picbank/Three%20Filipino%20Friends%20Holding%20Fast%20Food%20Bag%20With%20Joy.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="508.0" fitWidth="642.0" layoutX="596.0" layoutY="1083.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="408.0" fitWidth="398.0" layoutX="447.0" layoutY="625.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../picbank/Filipino%20Family%20Joyfully%20Celebrating%20With%20Fast%20Food%20Bag.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="504.0" fitWidth="350.0" layoutX="1142.0" layoutY="1084.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="396.0" fitWidth="275.0" layoutX="867.0" layoutY="625.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../picbank/Filipino%20Individual%20Joyfully%20Smiling%20While%20Enjoying%20Burger.png" />
                      </image>
                   </ImageView>
-                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="94.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
-                  <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="92.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ffffff73" height="319.0" layoutX="1158.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="366.0" />
+                  <ImageView fx:id="imageView1" fitHeight="219.0" fitWidth="160.0" layoutX="1177.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
+                        <Image url="@../../../picbank/p1%20whole.png" />
                      </image>
                   </ImageView>
-                  <Text fill="#18344c" layoutX="182.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MISSION" wrappingWidth="90.67034912109375">
+                  <Label layoutX="1344.0" layoutY="37.0" text="John Legend">
                      <font>
-                        <Font name="Gill Sans MT Bold" size="20.0" />
+                        <Font name="Gill Sans MT Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1346.0" layoutY="74.0" text="Administrative Assistant">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1346.0" layoutY="107.0" text="McLuxibee Main Branch">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1346.0" layoutY="131.0" text="john_legend@gmail.com">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1345.0" layoutY="158.0" text="+639380369397">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="1228.0" layoutY="211.0" text="Employee Manual" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1228.0" layoutY="242.0" text="Privacy Policy and Terms of Agreement" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1228.0" layoutY="275.0" text="Emergency Crisis Management Manual" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Text fill="#18344c" layoutX="24.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Updates" wrappingWidth="178.93679809570312">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="40.0" />
                      </font>
                   </Text>
-                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#d9eafd" height="375.0" layoutX="457.0" layoutY="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
-                  <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="455.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../picbank/Border_Frame_Transparent_Clip_Art_Image-1171187992.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="#18344c" layoutX="553.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VISION" wrappingWidth="74.67034912109375">
+                  <Text fill="#18344c" layoutX="20.0" layoutY="1084.0" strokeType="OUTSIDE" strokeWidth="0.0" text="According to latest ABZ report, McLuxibee is the perfect place to bring friends together for laughter and connection. Enjoy delicious meals and create unforgettable memories around our welcoming table!" textAlignment="JUSTIFY" wrappingWidth="396.8033142089844">
                      <font>
-                        <Font name="Gill Sans MT Bold" size="20.0" />
+                        <Font name="Gill Sans MT" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="#18344c" layoutX="124.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Our mission is to bring joy to every meal by serving delicious, high-quality food with unparalleled speed and care. We strive to create a welcoming environment where customers feel valued and appreciated, fostering connections through outstanding service and a commitment to excellence. Through innovation, teamwork, and dedication, we aim to spread happiness, one meal at a time, while positively impacting the communities we serve." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+                  <JFXButton layoutX="8.0" layoutY="1034.0" prefHeight="28.0" prefWidth="413.0" text="Serving Smiles: Bringing Joy to Every Circle at McLuxibee" textFill="#0093fc">
                      <font>
-                        <Font name="Gill Sans MT" size="15.0" />
+                        <Font name="Gill Sans MT Bold" size="14.5" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="434.0" layoutY="1034.0" prefHeight="28.0" prefWidth="413.0" text="Family First: Sharing Joy, One Meal at a Time at McLuxibee" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="14.5" />
+                     </font>
+                  </JFXButton>
+                  <Text fill="#18344c" layoutX="445.0" layoutY="1084.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABZ Reports: Mcluxibee is spreading joy by bringing families closer together over delicious meals. With a welcoming atmosphere and dishes everyone loves, it’s becoming the go-to spot for quality time and shared smiles." textAlignment="JUSTIFY" wrappingWidth="396.8033142089844">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="#18344c" layoutX="484.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To serve happiness in every bite by delivering high-quality, affordable meals with exceptional service. We are committed to creating a welcoming and joyful dining experience, fostering connections within the community, and continuously innovating to exceed customer expectations." textAlignment="JUSTIFY" wrappingWidth="210.40322875976562">
+                  <JFXButton layoutX="856.0" layoutY="1034.0" prefHeight="28.0" prefWidth="278.0" text="Bringing the Most Joy: McLuxibee Hailed #1 by XYZ Institute Survey!&quot;" textFill="#0093fc">
                      <font>
-                        <Font name="Gill Sans MT" size="15.0" />
+                        <Font name="Gill Sans MT Bold" size="14.5" />
+                     </font>
+                  </JFXButton>
+                  <Text fill="#18344c" layoutX="869.0" layoutY="1085.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABZ Reports: Mcluxibee is spreading joy by bringing families closer together over delicious meals..." textAlignment="JUSTIFY" wrappingWidth="267.7366638183594">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
+      <Circle id="clip" fx:id="clip" fill="#02ff02" layoutX="1467.0" layoutY="53.0" radius="45.0" stroke="#f8fafc" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="imageView" fitHeight="98.0" fitWidth="89.0" layoutX="1423.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picbank/p2.png" />
+         </image>
+      </ImageView>
+      <Text fill="#18344c" layoutX="188.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page" wrappingWidth="302.13677978515625">
+         <font>
+            <Font name="Gill Sans MT Bold" size="47.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
