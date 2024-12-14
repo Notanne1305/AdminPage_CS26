@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
+<AnchorPane prefHeight="802.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
    <children>
       <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
       <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
@@ -19,7 +19,7 @@
             <Image url="@../../../picbank/logo%202.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="MenuItemsBTN" layoutX="847.0" layoutY="2.0" onAction="#showMenuItems" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+      <JFXButton layoutX="847.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
@@ -29,20 +29,31 @@
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="StocksBTN" layoutX="1032.0" onAction="#showStocks" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
+      <JFXButton layoutX="1032.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="164.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" />
+      <Circle id="clip" fx:id="clip" fill="#02ff02" layoutX="1467.0" layoutY="53.0" radius="45.0" stroke="#f8fafc" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="imageView" fitHeight="98.0" fitWidth="89.0" layoutX="1423.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../picbank/p2.png" />
+         </image>
+      </ImageView>
+      <Text fill="#18344c" layoutX="188.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page" wrappingWidth="302.13677978515625">
+         <font>
+            <Font name="Gill Sans MT Bold" size="47.0" />
+         </font>
+      </Text>
       <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="104.0" pannable="true" prefHeight="800.0" prefWidth="1544.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1722.0" prefWidth="1544.0" style="-fx-background-color: D9EAFD;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1514.0" prefWidth="1544.0" style="-fx-background-color: D9EAFD;">
                <children>
                   <Rectangle fill="#ffffff40" height="512.0" layoutX="8.0" layoutY="13.0" stroke="#bcbcbc" strokeType="INSIDE" strokeWidth="0.0" width="1141.0" />
                   <ImageView fitHeight="426.0" fitWidth="841.0" layoutX="17.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Desktop/SoftwareFundaFinalProject/src/main/resources/pic_resources/thankyou.jpg" />
+                        <Image url="@../../../picbank/thankyou.jpg" />
                      </image>
                   </ImageView>
                   <Text fill="#18344c" layoutX="17.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE THERE IS MCLUXIBEE, THERE IS FUN!" wrappingWidth="1264.2701721191406">
@@ -55,6 +66,7 @@
                         <Font name="Gill Sans MT" size="19.0" />
                      </font>
                   </Text>
+                  <Rectangle fill="#ffffff40" height="598.0" layoutX="6.0" layoutY="614.0" stroke="#bcbcbc" strokeType="INSIDE" strokeWidth="0.0" width="1141.0" />
                   <ImageView fitHeight="395.0" fitWidth="402.0" layoutX="20.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../picbank/Three%20Filipino%20Friends%20Holding%20Fast%20Food%20Bag%20With%20Joy.png" />
@@ -70,7 +82,7 @@
                         <Image url="@../../../picbank/Filipino%20Individual%20Joyfully%20Smiling%20While%20Enjoying%20Burger.png" />
                      </image>
                   </ImageView>
-                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ffffff73" height="319.0" layoutX="1158.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="366.0" />
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ffffff73" height="319.0" layoutX="1158.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="353.0" />
                   <ImageView fx:id="imageView1" fitHeight="219.0" fitWidth="160.0" layoutX="1177.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../picbank/p1%20whole.png" />
@@ -78,7 +90,7 @@
                   </ImageView>
                   <Label layoutX="1344.0" layoutY="37.0" text="John Legend">
                      <font>
-                        <Font name="Gill Sans MT Bold" size="29.0" />
+                        <Font name="Gill Sans MT Bold" size="25.0" />
                      </font>
                   </Label>
                   <Label layoutX="1346.0" layoutY="74.0" text="Administrative Assistant">
@@ -101,19 +113,19 @@
                         <Font name="Gill Sans MT" size="14.0" />
                      </font>
                   </Label>
-                  <JFXButton layoutX="1228.0" layoutY="211.0" text="Employee Manual" textFill="#0093fc">
+                  <JFXButton layoutX="1210.0" layoutY="211.0" text="Employee Manual" textFill="#0093fc">
                      <font>
-                        <Font name="Gill Sans MT" size="17.0" />
+                        <Font name="Gill Sans MT" size="15.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="1228.0" layoutY="242.0" text="Privacy Policy and Terms of Agreement" textFill="#0093fc">
+                  <JFXButton layoutX="1210.0" layoutY="243.0" text="Privacy Policy and Terms of Agreement" textFill="#0093fc">
                      <font>
-                        <Font name="Gill Sans MT" size="17.0" />
+                        <Font name="Gill Sans MT" size="15.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="1228.0" layoutY="275.0" text="Emergency Crisis Management Manual" textFill="#0093fc">
+                  <JFXButton layoutX="1210.0" layoutY="275.0" text="Emergency Crisis Management Manual" textFill="#0093fc">
                      <font>
-                        <Font name="Gill Sans MT" size="17.0" />
+                        <Font name="Gill Sans MT" size="15.0" />
                      </font>
                   </JFXButton>
                   <Text fill="#18344c" layoutX="24.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Updates" wrappingWidth="178.93679809570312">
@@ -151,20 +163,142 @@
                         <Font name="Gill Sans MT" size="14.0" />
                      </font>
                   </Text>
+                  <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="39.0" layoutX="20.0" layoutY="1159.0" stroke="#0093fc" strokeType="INSIDE" strokeWidth="1.5" width="101.0" />
+                  <JFXButton layoutX="20.0" layoutY="1159.0" prefHeight="39.0" prefWidth="101.0" text="See more" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="39.0" layoutX="447.0" layoutY="1159.0" stroke="#0093fc" strokeType="INSIDE" strokeWidth="1.5" width="101.0" />
+                  <JFXButton layoutX="447.0" layoutY="1159.0" prefHeight="39.0" prefWidth="101.0" text="See more" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="39.0" layoutX="868.0" layoutY="1159.0" stroke="#0093fc" strokeType="INSIDE" strokeWidth="1.5" width="101.0" />
+                  <JFXButton layoutX="868.0" layoutY="1159.0" prefHeight="39.0" prefWidth="101.0" text="See more" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="first_pic" fitHeight="41.0" fitWidth="41.0" layoutX="370.0" layoutY="1159.0" onMouseClicked="#HeartReact" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="second_pic" fitHeight="41.0" fitWidth="41.0" layoutX="370.0" layoutY="1159.0" onMouseClicked="#Heart" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../picbank/heart%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="361.0" layoutY="1183.0" text="1" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="first_pic1" fitHeight="41.0" fitWidth="41.0" layoutX="798.0" layoutY="1159.0" onMouseClicked="#HeartReact1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="second_pic1" fitHeight="41.0" fitWidth="41.0" layoutX="798.0" layoutY="1159.0" onMouseClicked="#Heart1" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../picbank/heart%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="789.0" layoutY="1183.0" text="1" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="first_pic11" fitHeight="41.0" fitWidth="41.0" layoutX="1093.0" layoutY="1159.0" onMouseClicked="#HeartReact11" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/heart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="second_pic11" fitHeight="41.0" fitWidth="41.0" layoutX="1093.0" layoutY="1159.0" onMouseClicked="#Heart11" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../../picbank/heart%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1084.0" layoutY="1183.0" text="1" textFill="#0093fc">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f7cb2d" height="402.0" layoutX="1157.0" layoutY="815.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="353.0" />
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#f7cb2d" height="402.0" layoutX="1158.0" layoutY="374.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="353.0" />
+                  <Circle fill="#1f93ff00" layoutX="1333.0" layoutY="550.0" radius="106.0" stroke="#02ff02" strokeType="INSIDE" strokeWidth="10.0" />
+                  <ImageView fitHeight="150.0" fitWidth="160.0" layoutX="1257.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/fried-chicken.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1183.0" layoutY="687.0" text="150 ORDERS">
+                     <font>
+                        <Font name="Gill Sans MT" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1189.0" layoutY="729.0" text="1 PC CHCKN WERE SOLD AS OF DEC 14, 2024">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1193.0" layoutY="388.0" text="CHICKEN BEST SELLER">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#1f93ff00" layoutX="1334.0" layoutY="992.0" radius="106.0" stroke="#02ff02" strokeType="INSIDE" strokeWidth="10.0" />
+                  <Label layoutX="1184.0" layoutY="1129.0" text="150 ORDERS">
+                     <font>
+                        <Font name="Gill Sans MT" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1190.0" layoutY="1171.0" text="BIG BRGR WERE SOLD AS OF DEC 14, 2024">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1194.0" layoutY="830.0" text="BURGER BEST SELLER">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fill="#0c4572" height="270.0" layoutX="2.0" layoutY="1253.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+                  <ImageView fitHeight="126.0" fitWidth="129.0" layoutX="1271.0" layoutY="929.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/burger.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="1180.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/external.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="1180.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/external.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="1180.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../picbank/external.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
         </content>
       </ScrollPane>
-      <Circle id="clip" fx:id="clip" fill="#02ff02" layoutX="1467.0" layoutY="53.0" radius="45.0" stroke="#f8fafc" strokeType="INSIDE" strokeWidth="0.0" />
-      <ImageView fx:id="imageView" fitHeight="98.0" fitWidth="89.0" layoutX="1423.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="1318.0" layoutY="44.0" text="Hi, JL!">
+         <font>
+            <Font name="Gill Sans MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1244.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../picbank/p2.png" />
+            <Image url="@../../../picbank/bell.png" />
          </image>
       </ImageView>
-      <Text fill="#18344c" layoutX="188.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page" wrappingWidth="302.13677978515625">
-         <font>
-            <Font name="Gill Sans MT Bold" size="47.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>

@@ -22,7 +22,7 @@ public class Launcher extends Application {
 
         // Load the FXML file for the login screen
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LogIn.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hello");
         stage.setScene(scene);
         stage.show();

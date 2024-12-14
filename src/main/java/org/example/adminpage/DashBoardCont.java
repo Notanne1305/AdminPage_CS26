@@ -12,7 +12,28 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
+
+
 public class DashBoardCont {
+
+        @FXML
+        private ImageView first_pic;
+
+        @FXML
+        private ImageView second_pic;
+
+        @FXML
+        private ImageView first_pic1;
+
+        @FXML
+        private ImageView second_pic1;
+
+        @FXML
+        private ImageView first_pic11;
+
+        @FXML
+        private ImageView second_pic11;
 
         @FXML
         private ImageView imageView;
@@ -67,6 +88,40 @@ public class DashBoardCont {
 
                 imageView.setClip(clip);
             }
+
+
+            public void HeartReact(){
+                first_pic.setVisible(false);
+                second_pic.setVisible(true);
+
+            }
+
+            public void Heart() {
+                    first_pic.setVisible(true);
+                    second_pic.setVisible(false);
+            }
+            public void HeartReact1(){
+                first_pic1.setVisible(false);
+                second_pic1.setVisible(true);
+
+            }
+
+            public void Heart1() {
+                first_pic1.setVisible(true);
+                second_pic1.setVisible(false);
+    }
+            public void HeartReact11(){
+                first_pic11.setVisible(false);
+                second_pic11.setVisible(true);
+
+            }
+
+            public void Heart11() {
+                first_pic11.setVisible(true);
+                second_pic11.setVisible(false);
+            }
+
+
     }
 
 
