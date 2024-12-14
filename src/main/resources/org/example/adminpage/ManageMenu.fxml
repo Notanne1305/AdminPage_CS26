@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.ManageMenuCont">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1542.0">
+         <children>
+            <JFXButton fx:id="CategoryBTN" layoutX="55.0" layoutY="235.0" onAction="#showCategoryTable" prefHeight="69.0" prefWidth="224.0" text="Category" />
+            <JFXButton fx:id="ProductBTN" layoutX="58.0" layoutY="146.0" onAction="#showProductTable" prefHeight="69.0" prefWidth="224.0" text="Products" />
+            <JFXButton fx:id="addMenuBTN" layoutX="1332.0" layoutY="87.0" onAction="#handleAddMenuItem" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: gray;" text="Add Menu Item" />
+            <TableView fx:id="ProductsTable" layoutX="303.0" layoutY="140.0" prefHeight="562.0" prefWidth="1190.0">
+              <columns>
+                <TableColumn prefWidth="400.0" text="Item name" />
+                <TableColumn prefWidth="200.0" text="Price" />
+                  <TableColumn prefWidth="300.0" text="Categoty" />
+              </columns>
+            </TableView>
+            <AnchorPane fx:id="CategoryPane" layoutX="289.0" layoutY="57.0" prefHeight="672.0" prefWidth="1235.0" visible="false">
+               <children>
+                  <JFXButton fx:id="addCategoryBTN" layoutX="1040.0" layoutY="31.0" onAction="#handleAddCategory" prefHeight="41.0" prefWidth="158.0" style="-fx-background-color: gray;" text="Add Category" visible="false" />
+                  <TableView fx:id="CategoryTable1" layoutX="13.0" layoutY="83.0" prefHeight="562.0" prefWidth="1191.0">
+                     <columns>
+                        <TableColumn prefWidth="400.0" text="Category name" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="MenuBackBTN" layoutX="1354.0" layoutY="729.0" onAction="#handleBackDashboard" prefHeight="31.0" prefWidth="135.0" style="-fx-border-color: black;" text="Back" />
+         </children></AnchorPane>
+   </children>
+</StackPane>
