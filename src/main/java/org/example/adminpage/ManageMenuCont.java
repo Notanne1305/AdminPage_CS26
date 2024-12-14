@@ -54,6 +54,38 @@ public class ManageMenuCont {
     }
 
     @FXML
+    void handleAddMenuItem(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddProduct.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @FXML
+    void handleAddCategory(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddCategory.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     void showCategoryTable(ActionEvent event) {
         CategoryPane.setVisible(true);
         addCategoryBTN.setVisible(true);
