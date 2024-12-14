@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.AddItems.AddProductCont">
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.AddProductCont">
    <children>
       <Label layoutX="667.0" layoutY="58.0" text="Add Product Item">
          <font>
