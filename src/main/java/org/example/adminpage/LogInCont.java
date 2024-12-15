@@ -1,9 +1,12 @@
 package org.example.adminpage;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -22,6 +25,11 @@ public class LogInCont {
 
     @FXML
     private TextField UsernameTF;
+
+    @FXML
+    private JFXButton CreateAccBTN;
+
+
 
     @FXML
     public void initilize(){
@@ -62,6 +70,22 @@ public class LogInCont {
             System.out.println("Invalid username or password!");
             UsernameTF.setStyle("-fx-border-color: red");
             PasswordTF.setStyle("-fx-border-color: red");
+        }
+
+    }
+
+    @FXML
+    void showSignUp(ActionEvent event) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
