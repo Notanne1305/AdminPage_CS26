@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="802.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
+<AnchorPane prefHeight="802.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
    <children>
       <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
       <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
@@ -19,7 +19,7 @@
             <Image url="@../../../picbank/logo%202.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="847.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+      <JFXButton fx:id="MenuItemsBTN" layoutX="847.0" layoutY="2.0" onAction="#showMenuItems" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
@@ -29,7 +29,7 @@
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1032.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
+      <JFXButton fx:id="StocksBTN" layoutX="1032.0" onAction="#showStocks" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>

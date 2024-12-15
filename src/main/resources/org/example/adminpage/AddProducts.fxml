@@ -26,12 +26,12 @@
          <children>
             <ImageView fx:id="img" fitHeight="376.0" fitWidth="526.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../picbank/alltimefave.jpg" />
+                  <Image url="@../../../picbank/bananastrawberrysmoothie.jpg" />
                </image>
             </ImageView>
             <HBox prefHeight="25.0" prefWidth="262.0">
                <children>
-                  <Label fx:id="nameLabel" prefHeight="38.0" prefWidth="247.0" text="All Time Favourites">
+                  <Label fx:id="nameLabel" prefHeight="38.0" prefWidth="247.0" text="Banana Strawberyy Smoothie">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>
@@ -56,7 +56,7 @@
                   <Font name="Gill Sans MT" size="40.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="138.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Category Details" wrappingWidth="510.9999755859375">
+            <Text fill="WHITE" layoutX="138.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Product Details" wrappingWidth="510.9999755859375">
                <font>
                   <Font name="Gill Sans MT Bold" size="50.0" />
                </font>
