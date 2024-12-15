@@ -1,0 +1,12 @@
+/* Class for the header column */
+    .header-column {
+    font-family: "Gill Sans MT";
+    font-size: 30px;
+}
+
+/* Class for the data cells */
+.data-cell {
+    font-family: "Gill Sans MT";
+    font-size: 19px;
+}
+
