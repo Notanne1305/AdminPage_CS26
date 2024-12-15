@@ -2,10 +2,13 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.AddCategoryCont">
    <children>
-      <Label layoutX="610.0" layoutY="71.0" text="add" />
+      <Label layoutX="646.0" layoutY="45.0" text="ADD CATEGORY">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font></Label>
    </children>
 </AnchorPane>

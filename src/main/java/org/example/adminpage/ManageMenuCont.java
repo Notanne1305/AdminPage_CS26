@@ -20,16 +20,19 @@ public class ManageMenuCont {
     private AnchorPane CategoryPane;
 
     @FXML
-    private TableView<?> CategoryTable1;
-
-    @FXML
     private JFXButton ProductBTN;
 
     @FXML
     private TableView<?> ProductsTable;
 
     @FXML
+    private TableView<?> CategoryTable;
+
+    @FXML
     private JFXButton addCategoryBTN;
+
+    @FXML
+    private JFXButton addProductBTN;
 
     @FXML
     private JFXButton addMenuBTN;
@@ -87,16 +90,19 @@ public class ManageMenuCont {
 
     @FXML
     void showCategoryTable(ActionEvent event) {
-        CategoryPane.setVisible(true);
+        CategoryTable.setVisible(true);
+        ProductsTable.setVisible(false);
         addCategoryBTN.setVisible(true);
+        addProductBTN.setVisible(false);
 
     }
 
     @FXML
     void showProductTable(ActionEvent event) {
-        CategoryPane.setVisible(false);
+        CategoryTable.setVisible(false);
+        ProductsTable.setVisible(true);
         addCategoryBTN.setVisible(false);
-        addMenuBTN.setVisible(true);
+        addProductBTN.setVisible(true);
 
     }
 
