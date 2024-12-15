@@ -18,20 +18,20 @@
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;">
          <children>
-            <Rectangle fill="#bcccdc" height="124.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
-            <Circle id="clip" fx:id="clip" fill="#02ff02" layoutX="1477.0" layoutY="63.0" radius="45.0" stroke="#f8fafc" strokeType="INSIDE" strokeWidth="0.0" />
-            <ImageView fx:id="imageView" fitHeight="98.0" fitWidth="89.0" layoutX="1433.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle fill="#bcccdc" height="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
+            <Circle id="clip" fx:id="clip" fill="#02ff02" layoutX="1467.0" layoutY="53.0" radius="45.0" stroke="#f8fafc" strokeType="INSIDE" strokeWidth="0.0" />
+            <ImageView fx:id="imageView" fitHeight="98.0" fitWidth="89.0" layoutX="1423.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../picbank/p2.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="CategoryBTN" layoutX="-3.0" layoutY="274.0" onAction="#showCategoryTable" prefHeight="70.0" prefWidth="282.0" text="Category">
+            <JFXButton fx:id="CategoryBTN" layoutX="-3.0" layoutY="266.0" onAction="#showCategoryTable" prefHeight="70.0" prefWidth="282.0" text="Category">
                <font>
-                  <Font name="Gill Sans MT" size="28.0" />
+                  <Font name="Gill Sans MT Bold" size="28.0" />
                </font></JFXButton>
-            <JFXButton fx:id="ProductBTN" layoutY="185.0" onAction="#showProductTable" prefHeight="70.0" prefWidth="282.0" text="Products">
+            <JFXButton fx:id="ProductBTN" layoutY="197.0" onAction="#showProductTable" prefHeight="70.0" prefWidth="282.0" text="Products">
                <font>
-                  <Font name="Gill Sans MT" size="27.0" />
+                  <Font name="Gill Sans MT Bold" size="27.0" />
                </font></JFXButton>
             <JFXButton fx:id="addProductBTN" layoutX="1305.0" layoutY="133.0" onAction="#handleAddProduct" prefHeight="46.0" prefWidth="216.0" style="-fx-background-color: green;" text="Add Product" textFill="WHITE">
                <font>
@@ -42,7 +42,7 @@
                <font>
                   <Font name="Gill Sans MT" size="25.0" />
                </font></JFXButton>
-            <TableView fx:id="ProductsTable" layoutX="284.0" layoutY="184.0" prefHeight="551.0" prefWidth="1236.0" stylesheets="@CSS/tableviewfontsize.css">
+            <TableView fx:id="ProductsTable" layoutX="284.0" layoutY="197.0" prefHeight="589.0" prefWidth="1236.0" stylesheets="@CSS/tableviewfontsize.css">
               <columns>
 
                  <TableColumn prefWidth="512.0" text="Name">
@@ -99,80 +99,41 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="MenuBackBTN" layoutX="1304.0" layoutY="740.0" onAction="#handleBackDashboard" prefHeight="46.0" prefWidth="216.0" style="-fx-background-color: red;" text="Back" textFill="WHITE">
-               <font>
-                  <Font name="Gill Sans MT" size="25.0" />
-               </font></JFXButton>
-            <Label layoutX="1328.0" layoutY="54.0" text="Hi, JL!">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="25.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1254.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1244.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../picbank/bell.png" />
                </image>
             </ImageView>
-            <JFXButton layoutX="857.0" layoutY="12.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
+            <JFXButton layoutX="847.0" layoutY="2.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
                <font>
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="12.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
+            <JFXButton fx:id="MenuBackBTN" layoutX="661.0" layoutY="2.0" onAction="#handleBackDashboard" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
                <font>
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="1042.0" layoutY="10.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
+            <JFXButton layoutX="1032.0" layoutY="2.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
                <font>
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </JFXButton>
-            <Label layoutX="1328.0" layoutY="54.0" text="Hi, JL!">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="25.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1254.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../picbank/bell.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="50.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="40.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../picbank/logo%202.png" />
                </image>
             </ImageView>
-            <JFXButton layoutX="857.0" layoutY="12.0" prefHeight="108.0" prefWidth="185.0" text="Menu Items" textFill="#18344c" underline="true">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="25.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="12.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="25.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="1042.0" layoutY="10.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="25.0" />
-               </font>
-            </JFXButton>
-            <Text fill="#18344c" layoutX="198.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page" wrappingWidth="302.13677978515625">
+            <Text fill="#18344c" layoutX="188.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Page" wrappingWidth="302.13677978515625">
                <font>
                   <Font name="Gill Sans MT Bold" size="47.0" />
                </font>
             </Text>
-            <Label layoutX="1328.0" layoutY="54.0" text="Hi, JL!">
+            <Label layoutX="1318.0" layoutY="44.0" text="Hi, JL!">
                <font>
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </Label>
-            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="1254.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../picbank/bell.png" />
-               </image>
-            </ImageView>
          </children></AnchorPane>
    </children>
 </StackPane>
