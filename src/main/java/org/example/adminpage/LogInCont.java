@@ -5,17 +5,23 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.adminpage.DaoImpl.LoginDao;
+import org.example.adminpage.Model.User;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LogInCont {
+public class LogInCont implements Initializable {
 
     @FXML
     private Button LogInBtn;
@@ -29,6 +35,8 @@ public class LogInCont {
     @FXML
     private JFXButton CreateAccBTN;
 
+    private LoginDao loginDao;
+
 
 
     @FXML
@@ -36,41 +44,56 @@ public class LogInCont {
         Platform.runLater(() -> LogInBtn.requestFocus());
     }
 
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
     @FXML
     void handleLogIn(ActionEvent event) {
+        if(UsernameTF.getText().isEmpty() || PasswordTF.getText().isEmpty()){
+            showError("Please fill in all fields");
+        }else{
 
-        String username = "admin";
-        String password = "admin";
+            User user = new User();
+            user.setUsername(UsernameTF.getText());
+            user.setPassword(PasswordTF.getText());
 
-        if (UsernameTF.getText().equals(username) && PasswordTF.getText().equals(password)) {
-            try {
+            if (loginDao.findUser(user)) {
+                try {
 
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
 
-                // Update the primary stage with the new scene
-                Stage stage = new Stage();
-                stage.setTitle("Dashboard Page");
-                stage.setScene(scene);
-                stage.show();
+                    // Update the primary stage with the new scene
+                    Stage stage = new Stage();
+                    stage.setTitle("Dashboard Page");
+                    stage.setScene(scene);
+                    stage.show();
 
-                Stage window = (Stage) LogInBtn.getScene().getWindow();
-                window.close();
+                    Stage window = (Stage) LogInBtn.getScene().getWindow();
+                    window.close();
 
-                System.out.println("Login button clicked!");
-            } catch (IOException e) {
-                e.printStackTrace();
+                    System.out.println("Login button clicked!");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (UsernameTF.getText().isBlank()) {
+                UsernameTF.setStyle("-fx-border-color: red");
+            } else if (PasswordTF.getText().isBlank()) {
+                PasswordTF.setStyle("-fx-border-color: red");
+
+            } else {
+                System.out.println("Invalid username or password!");
+                UsernameTF.setStyle("-fx-border-color: red");
+                PasswordTF.setStyle("-fx-border-color: red");
             }
-        } else if (UsernameTF.getText().isBlank()) {
-            UsernameTF.setStyle("-fx-border-color: red");
-        } else if (PasswordTF.getText().isBlank()) {
-            PasswordTF.setStyle("-fx-border-color: red");
-
-        } else {
-            System.out.println("Invalid username or password!");
-            UsernameTF.setStyle("-fx-border-color: red");
-            PasswordTF.setStyle("-fx-border-color: red");
         }
+
+
+
 
     }
 
@@ -90,5 +113,10 @@ public class LogInCont {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loginDao = new LoginDao();
+
     }
+}
 

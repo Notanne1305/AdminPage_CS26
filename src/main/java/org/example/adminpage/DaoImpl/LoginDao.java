@@ -13,7 +13,7 @@ public class LoginDao implements UserDao {
     @Override
     public void createUser(User user) {
 
-        String sql = "INSERT INTO users(email, username, password) VALUES (?,?,?) ";
+        String sql = "INSERT INTO users(email, username, password) VALUES (?,?,?)";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, user.getEmail());

@@ -7,11 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.example.adminpage.DaoImpl.LoginDao;
+import org.example.adminpage.Model.User;
 
 public class SignUpCont {
 
@@ -48,6 +51,8 @@ public class SignUpCont {
     @FXML
     private Text poweredByText;
 
+    private LoginDao loginDao;
+
     /**
      * This method handles the "Create Account" button action.
      * It validates the input fields and provides feedback to the user.
@@ -60,26 +65,44 @@ public class SignUpCont {
         String confirmPassword = ConfirmPasswordTF.getText();
 
         if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            System.out.println("All fields are required.");
+            showError("Please fill in all fields.");
             return;
         }
 
         if (!password.equals(confirmPassword)) {
-            System.out.println("Passwords do not match.");
+            showError("Passwords do not match.");
             return;
         }
+
+        User user = new User();
+        user.setEmail(UseremailTF.getText());
+        user.setUsername(UsernameTF.getText());
+        user.setPassword(PasswordTF.getText());
+
+        loginDao.createUser(user);
+
 
         // TODO: Add logic for creating an account (e.g., saving user info to a database)
         System.out.println("Account created successfully for: " + username);
     }
 
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
     /**
      * Initialize method is automatically called after the FXML is loaded.
      * You can use this to set up event listeners or initialize UI components.
      */
     @FXML
     private void initialize() {
+        loginDao = new LoginDao();
         System.out.println("LogInCont initialized.");
+
         // Optional: Add placeholder setup or focus listeners here
     }
 
