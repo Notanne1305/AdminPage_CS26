@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
@@ -12,78 +13,68 @@
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="1544.0">
          <children>
-            <JFXButton fx:id="SidesBTN" layoutX="72.0" layoutY="598.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Sides">
+            <JFXButton fx:id="SidesBTN" layoutX="77.0" layoutY="549.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Sides">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="DessertsBTN" layoutX="72.0" layoutY="522.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Desserts">
+            <JFXButton fx:id="DessertsBTN" layoutX="77.0" layoutY="473.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Desserts">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="BreakfastMenuBTN" layoutX="71.0" layoutY="446.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Breakfast Menu">
+            <JFXButton fx:id="BreakfastMenuBTN" layoutX="76.0" layoutY="397.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Breakfast Menu">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="BurgerBTN" layoutX="71.0" layoutY="370.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Burgers">
+            <JFXButton fx:id="BurgerBTN" layoutX="76.0" layoutY="321.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Burgers">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="ChickenBTN" layoutX="71.0" layoutY="293.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Chicken">
+            <JFXButton fx:id="ChickenBTN" layoutX="76.0" layoutY="244.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Chicken">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="AllTimeFavBTN" layoutX="71.0" layoutY="216.0" onAction="#handleButtonAction" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="All time favourites">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </JFXButton>
-            <Label layoutX="143.0" layoutY="158.0" prefHeight="48.0" prefWidth="142.0" text="Categories">
+            <Label layoutX="133.0" layoutY="167.0" prefHeight="48.0" prefWidth="142.0" text="Categories">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TableView fx:id="AllTimeFavTable" layoutX="357.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0">
-              <columns>
-                <TableColumn prefWidth="450.0" text="All time fav Item" />
-                <TableColumn prefWidth="250.0" text="Stocks" />
-              </columns>
-            </TableView>
-            <TableView fx:id="ChickenTable" layoutX="358.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0" visible="false">
+            <TableView fx:id="table" layoutX="358.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0">
                <columns>
-                  <TableColumn prefWidth="450.0" text="Chicken Items" />
-                  <TableColumn prefWidth="250.0" text="Stocks" />
-               </columns>
-            </TableView>
-            <TableView fx:id="BurgerTable" layoutX="358.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0" visible="false">
-               <columns>
-                  <TableColumn prefWidth="450.0" text="Burger Items" />
-                  <TableColumn prefWidth="250.0" text="Stocks" />
-               </columns>
-            </TableView>
-            <TableView fx:id="BreakfastMenuTable" layoutX="357.0" layoutY="214.0" prefHeight="451.0" prefWidth="1079.0" visible="false">
-               <columns>
-                  <TableColumn prefWidth="450.0" text="Breakfast Menu Items" />
-                  <TableColumn prefWidth="250.0" text="Stocks" />
-               </columns>
-            </TableView>
-            <TableView fx:id="DessertsTable" layoutX="358.0" layoutY="213.0" prefHeight="451.0" prefWidth="1079.0" visible="false">
-               <columns>
-                  <TableColumn prefWidth="450.0" text="Desserts Item" />
-                  <TableColumn prefWidth="250.0" text="Stocks" />
-               </columns>
-            </TableView>
-            <TableView fx:id="SidesTable" layoutX="358.0" layoutY="214.0" prefHeight="451.0" prefWidth="1079.0" visible="false">
-               <columns>
-                  <TableColumn prefWidth="450.0" text="Side Items" />
-                  <TableColumn prefWidth="250.0" text="Stocks" />
+                  <TableColumn fx:id="foodIdColumn" prefWidth="123.33334350585938" text="Food Id" />
+                  <TableColumn fx:id="nameColumn" prefWidth="463.0" text="Category" />
+                  <TableColumn fx:id="stockColumn" prefWidth="491.0" text="Stocks" />
                </columns>
             </TableView>
             <JFXButton fx:id="StockBackButton" layoutX="1298.0" layoutY="720.0" onAction="#handleBackDashboard" prefHeight="31.0" prefWidth="135.0" style="-fx-border-color: black;" text="Back" />
+            <JFXButton fx:id="beveragesBTN" layoutX="78.0" layoutY="623.0" prefHeight="69.0" prefWidth="225.0" style="-fx-border-color: black;" text="Beverages">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane fx:id="stockOperation" layoutX="707.0" layoutY="675.0" prefHeight="103.0" prefWidth="382.0" visible="false">
+               <children>
+                  <AnchorPane prefHeight="103.0" prefWidth="382.0">
+                     <children>
+                        <JFXButton fx:id="removeBTN" layoutX="37.0" layoutY="39.0" style="-fx-background-color: red;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <TextField fx:id="stockQuantityField" layoutX="117.0" layoutY="39.0" promptText="Stock Quantity" />
+                        <JFXButton fx:id="addBTN" layoutX="283.0" layoutY="39.0" style="-fx-background-color: #008000;" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children></AnchorPane>
    </children>
 </StackPane>

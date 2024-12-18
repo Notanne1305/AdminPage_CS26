@@ -10,4 +10,6 @@ module org.example.adminpage {
 
     opens org.example.adminpage to javafx.fxml;
     exports org.example.adminpage;
+    exports org.example.adminpage.Model;
+    opens org.example.adminpage.Model to javafx.fxml;
 }
