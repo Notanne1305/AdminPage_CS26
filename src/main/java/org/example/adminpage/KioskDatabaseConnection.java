@@ -12,7 +12,7 @@ public class KioskDatabaseConnection {
 
     static {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/kioskmanagementsystem");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/thecruds_db");
         config.setUsername("root");
         config.setPassword("");
         config.setMaximumPoolSize(10); // Maximum number of connections
