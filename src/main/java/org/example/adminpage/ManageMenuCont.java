@@ -43,6 +43,21 @@ public class ManageMenuCont {
     private JFXButton MenuBackBTN;
 
     @FXML
+    void showStocks(ActionEvent event) {
+        try{
+            System.out.println("Stocks button clicked!");
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stocks.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
     void handleBackDashboard(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));

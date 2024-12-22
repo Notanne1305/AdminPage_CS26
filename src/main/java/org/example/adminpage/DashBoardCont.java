@@ -66,6 +66,7 @@ public class DashBoardCont {
     @FXML
         void showStocks(ActionEvent event) {
             try{
+                System.out.println("Stocks button clicked!");
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stocks.fxml"));
                 Parent root = fxmlLoader.load();
 

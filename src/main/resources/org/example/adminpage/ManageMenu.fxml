@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.ManageMenuCont">
+<StackPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.ManageMenuCont">
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="1542.0" style="-fx-background-color: D9EAFD;">
          <children>
@@ -25,7 +25,7 @@
                   <Image url="@../../../picbank/p2.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="CategoryBTN" layoutX="-3.0" layoutY="266.0" onAction="#showCategoryTable" prefHeight="70.0" prefWidth="282.0" text="Category">
+            <JFXButton fx:id="CategoryBTN" layoutX="-2.0" layoutY="266.0" onAction="#showCategoryTable" prefHeight="70.0" prefWidth="282.0" text="Category">
                <font>
                   <Font name="Gill Sans MT Bold" size="28.0" />
                </font></JFXButton>
@@ -114,7 +114,7 @@
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="1032.0" layoutY="2.0" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
+            <JFXButton layoutX="1032.0" layoutY="2.0" onAction="#showStocks" prefHeight="108.0" prefWidth="139.0" text="Stocks" textFill="#18344c" underline="true">
                <font>
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
