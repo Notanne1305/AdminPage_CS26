@@ -64,7 +64,7 @@ public class LogInCont implements Initializable {
             if (loginDao.findUser(user)) {
                 try {
 
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stocks.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 1521, 800);
 
                     // Update the primary stage with the new scene

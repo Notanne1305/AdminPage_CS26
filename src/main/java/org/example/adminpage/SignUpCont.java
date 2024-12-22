@@ -80,6 +80,11 @@ public class SignUpCont {
         user.setPassword(PasswordTF.getText());
 
         loginDao.createUser(user);
+        UseremailTF.setText("");
+        UsernameTF.setText("");
+        PasswordTF.setText("");
+        ConfirmPasswordTF.setText("");
+
 
 
         // TODO: Add logic for creating an account (e.g., saving user info to a database)

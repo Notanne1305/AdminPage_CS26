@@ -163,7 +163,7 @@ private void checkField(boolean add) {
             currentItem.setStock(kioskDao.getStockByFoodId(currentItem.getFoodId()));
             showError("Operation Successful");
         }else{
-            showError("Operation Failed");
+            showError("Operation Failed. Invalid amount");
         }
         table.refresh();
         stockQuantityField.setText("");
