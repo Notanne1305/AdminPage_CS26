@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.DashBoardCont">
+<AnchorPane prefHeight="800.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.adminpage.ProductController">
    <children>
       <Rectangle fill="#d9eafd" height="800.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
       <Rectangle fill="#bcccdc" height="123.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1542.0" />
@@ -31,7 +32,7 @@
             </ImageView>
             <HBox prefHeight="25.0" prefWidth="262.0">
                <children>
-                  <Label fx:id="nameLabel" prefHeight="38.0" prefWidth="247.0" text="Banana Strawberyy Smoothie">
+                  <Label fx:id="nameLabel" prefHeight="30.0" prefWidth="330.0" text="Banana Strawberyy Smoothie">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>
@@ -45,46 +46,6 @@
             </HBox>
          </children>
       </VBox>
-      <AnchorPane layoutX="805.0" layoutY="123.0" prefHeight="666.0" prefWidth="738.0" style="-fx-background-color: 18344c;">
-         <children>
-            <Rectangle arcHeight="8.0" fill="#18344c" height="677.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="739.0" />
-            <TextField layoutX="250.0" layoutY="173.0" prefHeight="52.0" prefWidth="414.0" />
-            <TextField layoutX="250.0" layoutY="288.0" prefHeight="52.0" prefWidth="414.0" />
-            <TextField layoutX="250.0" layoutY="403.0" prefHeight="52.0" prefWidth="414.0" />
-            <Text fill="WHITE" layoutX="78.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="127.79996337890623">
-               <font>
-                  <Font name="Gill Sans MT" size="40.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="138.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Product Details" wrappingWidth="510.9999755859375">
-               <font>
-                  <Font name="Gill Sans MT Bold" size="50.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="78.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="127.79996337890623">
-               <font>
-                  <Font name="Gill Sans MT" size="40.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="78.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image" wrappingWidth="127.79996337890623">
-               <font>
-                  <Font name="Gill Sans MT" size="40.0" />
-               </font>
-            </Text>
-            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="48.0" layoutX="446.0" layoutY="598.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
-            <JFXButton layoutX="443.0" layoutY="594.0" onMousePressed="#cancelButton" prefHeight="56.0" prefWidth="221.0" text="Save" textFill="GREEN">
-               <font>
-                  <Font name="Gill Sans MT" size="30.0" />
-               </font>
-            </JFXButton>
-            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="48.0" layoutX="78.0" layoutY="598.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
-            <JFXButton layoutX="77.0" layoutY="591.0" onMousePressed="#cancelButton" prefHeight="56.0" prefWidth="221.0" text="Cancel" textFill="RED">
-               <font>
-                  <Font name="Gill Sans MT" size="30.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </AnchorPane>
       <ImageView fitHeight="103.0" fitWidth="195.0" layoutX="50.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../picbank/logo%202.png" />
@@ -100,7 +61,7 @@
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="671.0" layoutY="12.0" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
+      <JFXButton layoutX="671.0" layoutY="12.0" onAction="#handleBackDashboard" prefHeight="108.0" prefWidth="185.0" text="Dashboard" textFill="#18344c" underline="true">
          <font>
             <Font name="Gill Sans MT Bold" size="25.0" />
          </font>
@@ -126,5 +87,51 @@
             <Image url="@../../../picbank/bell.png" />
          </image>
       </ImageView>
+      <AnchorPane layoutX="815.0" layoutY="123.0" prefHeight="666.0" prefWidth="738.0" style="-fx-background-color: 18344c;">
+         <children>
+            <Rectangle arcHeight="8.0" fill="#18344c" height="677.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="739.0" />
+            <TextField fx:id="nameField" layoutX="250.0" layoutY="173.0" prefHeight="52.0" prefWidth="414.0" promptText="Enter product name" />
+            <TextField fx:id="priceField" layoutX="250.0" layoutY="348.0" prefHeight="52.0" prefWidth="414.0" promptText="Enter product prie" />
+            <Text fill="WHITE" layoutX="78.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="138.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Product Details" wrappingWidth="510.9999755859375">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="78.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="78.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image" wrappingWidth="127.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="48.0" layoutX="446.0" layoutY="598.0" stroke="GREEN" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
+            <JFXButton fx:id="saveBtn" layoutX="443.0" layoutY="594.0" prefHeight="56.0" prefWidth="221.0" text="Save" textFill="GREEN">
+               <font>
+                  <Font name="Gill Sans MT" size="30.0" />
+               </font>
+            </JFXButton>
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="48.0" layoutX="78.0" layoutY="598.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" width="215.0" />
+            <JFXButton fx:id="cancelBtn" layoutX="77.0" layoutY="591.0" prefHeight="56.0" prefWidth="221.0" text="Cancel" textFill="RED">
+               <font>
+                  <Font name="Gill Sans MT" size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="250.0" layoutY="469.0" prefHeight="46.0" prefWidth="414.0" style="-fx-background-color: #f2f2f2;" text="Import Image" />
+            <Text fill="WHITE" layoutX="78.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category" wrappingWidth="167.79996337890623">
+               <font>
+                  <Font name="Gill Sans MT" size="40.0" />
+               </font>
+            </Text>
+            <ComboBox layoutX="250.0" layoutY="261.0" prefHeight="52.0" prefWidth="414.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
