@@ -4,16 +4,24 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.example.adminpage.DaoImpl.CategoryDao;
+import org.example.adminpage.Model.Category;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ManageMenuCont {
+public class ManageMenuCont implements Initializable {
 
     @FXML
     private JFXButton CategoryBTN;
@@ -28,7 +36,16 @@ public class ManageMenuCont {
     private TableView<?> ProductsTable;
 
     @FXML
-    private TableView<?> CategoryTable;
+    private TableColumn<?,?> productPriceColumn;
+
+    @FXML
+    private TableColumn<?,?> productNameColumn;
+
+    @FXML
+    private TableView<Category> CategoryTable;
+
+    @FXML
+    private TableColumn<Category,String> categoryNameColumn;
 
     @FXML
     private JFXButton addCategoryBTN;
@@ -41,6 +58,8 @@ public class ManageMenuCont {
 
     @FXML
     private JFXButton MenuBackBTN;
+    
+    private CategoryDao categoryDao;
 
     @FXML
     void showStocks(ActionEvent event) {
@@ -112,6 +131,14 @@ public class ManageMenuCont {
         addCategoryBTN.setVisible(true);
         addProductBTN.setVisible(false);
 
+        List<Category> categories = categoryDao.getAllCategory();
+        CategoryTable.getItems().clear();
+        
+        for(Category category: categories){
+            CategoryTable.getItems().add(category);
+        }
+
+
     }
 
     @FXML
@@ -162,5 +189,10 @@ public class ManageMenuCont {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        categoryDao = new CategoryDao();
+        categoryNameColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("categoryName"));
 
+    }
 }

@@ -6,7 +6,10 @@ import org.example.adminpage.Model.Category;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryDao {
 
@@ -31,5 +34,30 @@ public class CategoryDao {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public List<Category> getAllCategory(){
+        List<Category> categories = new ArrayList<>();
+        String sql = "SELECT * FROM foodcategories";
+        try (Connection conn = KioskDatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+
+            while(rs.next()){
+                Category category = new Category();
+                category.setCategoryId(rs.getInt("category_id"));
+                category.setCategoryName(rs.getString("name"));
+                category.setCategoryImage(rs.getString("img_src"));
+                category.setCreatedAt(rs.getTimestamp("created_at"));
+                category.setUpdatedAt(rs.getTimestamp("updated_at"));
+                categories.add(category);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return categories;
+
     }
 }

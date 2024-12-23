@@ -42,10 +42,10 @@
                <font>
                   <Font name="Gill Sans MT" size="25.0" />
                </font></JFXButton>
-            <TableView fx:id="ProductsTable" layoutX="285.0" layoutY="185.0" prefHeight="589.0" prefWidth="1236.0" stylesheets="@CSS/tableviewfontsize.css">
+            <TableView fx:id="ProductsTable" layoutX="285.0" layoutY="185.0" prefHeight="589.0" prefWidth="1236.0" stylesheets="@CSS/tableviewfontsize.css" visible="false">
               <columns>
 
-                 <TableColumn prefWidth="628.0" text="Name">
+                 <TableColumn fx:id="productNameColumn" prefWidth="628.0" text="Name">
                     <style>-fx-font-family: 'Gill Sans MT'; -fx-font-size: 25px;</style>
                     <styleClass>
                        <String fx:value="header-column" />
@@ -53,7 +53,7 @@
                     </styleClass>
                  </TableColumn>
 
-                 <TableColumn prefWidth="607.0" text="Price">
+                 <TableColumn fx:id="productPriceColumn" prefWidth="607.0" text="Price">
                     <style>-fx-font-family: 'Gill Sans MT'; -fx-font-size: 25px;</style>
                     <styleClass>
                        <String fx:value="header-column" />
@@ -67,7 +67,7 @@
             </TableView>
             <TableView fx:id="CategoryTable" layoutX="285.0" layoutY="185.0" prefHeight="589.0" prefWidth="1243.0" stylesheets="@CSS/tableviewfontsize.css" visible="false">
                <columns>
-                  <TableColumn prefWidth="1234.0" style="-fx-font-family: 'Gill Sans MT'; -fx-font-size: 25px;" text="Name">
+                  <TableColumn fx:id="categoryNameColumn" prefWidth="1234.0" style="-fx-font-family: 'Gill Sans MT'; -fx-font-size: 25px;" text="Name">
                      <styleClass>
                         <String fx:value="header-column" />
                         <String fx:value="data-cell" />

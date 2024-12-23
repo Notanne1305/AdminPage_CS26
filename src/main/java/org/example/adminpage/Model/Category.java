@@ -1,6 +1,6 @@
 package org.example.adminpage.Model;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 public class Category {
     private int categoryId;
@@ -9,6 +9,11 @@ public class Category {
 
     private Timestamp updatedAt;
     private Timestamp createdAt;
+
+
+    public Category() {
+
+    }
 
     public int getCategoryId() {
         return categoryId;

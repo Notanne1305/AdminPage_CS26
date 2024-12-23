@@ -154,8 +154,27 @@ public class CategoryController {
             System.out.println("Image path: " + file.getPath());
             categoryDao.createCategory(category);
             showError("Category added successfully");
+
+            nameField.setText("");
+            img.setImage(null);
+            file = null;
         }
     }
+
+    public void cancelBTN(ActionEvent event){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ManageMenu.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
