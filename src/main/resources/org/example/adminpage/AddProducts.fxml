@@ -91,7 +91,7 @@
          <children>
             <Rectangle arcHeight="8.0" fill="#18344c" height="677.0" layoutX="-1.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="739.0" />
             <TextField fx:id="nameField" layoutX="250.0" layoutY="173.0" prefHeight="52.0" prefWidth="414.0" promptText="Enter product name" />
-            <TextField fx:id="priceField" layoutX="250.0" layoutY="348.0" prefHeight="52.0" prefWidth="414.0" promptText="Enter product prie" />
+            <TextField fx:id="priceField" layoutX="250.0" layoutY="348.0" prefHeight="52.0" prefWidth="414.0" promptText="Enter product price" />
             <Text fill="WHITE" layoutX="78.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="127.79996337890623">
                <font>
                   <Font name="Gill Sans MT" size="40.0" />

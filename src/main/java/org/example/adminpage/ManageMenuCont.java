@@ -14,7 +14,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.adminpage.DaoImpl.CategoryDao;
+import org.example.adminpage.DaoImpl.FoodDao;
 import org.example.adminpage.Model.Category;
+import org.example.adminpage.Model.Food;
 
 import java.io.IOException;
 import java.net.URL;
@@ -33,19 +35,25 @@ public class ManageMenuCont implements Initializable {
     private JFXButton ProductBTN;
 
     @FXML
-    private TableView<?> ProductsTable;
+    private TableView<Food> ProductsTable;
 
     @FXML
-    private TableColumn<?,?> productPriceColumn;
+    private TableColumn<Food, Integer> productPriceColumn;
 
     @FXML
-    private TableColumn<?,?> productNameColumn;
+    private TableColumn<Food,String> productNameColumn;
+
+    @FXML
+    private TableColumn<Food,Integer> productIdColumn;
 
     @FXML
     private TableView<Category> CategoryTable;
 
     @FXML
     private TableColumn<Category,String> categoryNameColumn;
+
+    @FXML
+    private TableColumn<Category,Integer> categoryIdColumn;
 
     @FXML
     private JFXButton addCategoryBTN;
@@ -60,6 +68,7 @@ public class ManageMenuCont implements Initializable {
     private JFXButton MenuBackBTN;
     
     private CategoryDao categoryDao;
+    private FoodDao foodDao;
 
     @FXML
     void showStocks(ActionEvent event) {
@@ -148,13 +157,20 @@ public class ManageMenuCont implements Initializable {
         addCategoryBTN.setVisible(false);
         addProductBTN.setVisible(true);
 
+        List<Food> foods = foodDao.getAllFood();
+        ProductsTable.getItems().clear();
+
+        for(Food food: foods){
+            ProductsTable.getItems().add(food);
+        }
+
     }
 
     @FXML
     void handleAddProduct(ActionEvent event) {
         try {
             // Load the FXML file
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ManageMenu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddProducts.fxml"));
             Parent root = fxmlLoader.load();
 
             // Get the current stage (window)
@@ -169,30 +185,18 @@ public class ManageMenuCont implements Initializable {
         }
     }
 
-    @FXML
-    void setAddProductBTNBTN(ActionEvent event) {
-        try {
-            // Load the FXML file
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ManageMenu.fxml"));
-            Parent root = fxmlLoader.load();
-
-            // Get the current stage (window)
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        foodDao = new FoodDao();
         categoryDao = new CategoryDao();
+        categoryIdColumn.setCellValueFactory(new PropertyValueFactory<Category, Integer>("categoryId"));
         categoryNameColumn.setCellValueFactory(new PropertyValueFactory<Category, String>("categoryName"));
 
+
+        productIdColumn.setCellValueFactory(new PropertyValueFactory<Food, Integer>("categoryId"));
+        productNameColumn.setCellValueFactory(new PropertyValueFactory<Food, String>("name"));
+        productPriceColumn.setCellValueFactory(new PropertyValueFactory<Food, Integer>("price"));
     }
 }
