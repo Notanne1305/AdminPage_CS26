@@ -60,4 +60,21 @@ public class CategoryDao {
         return categories;
 
     }
+    public List<String> getAllCategoryNames(){
+        List<String> categories = new ArrayList<>();
+        String sql = "SELECT name FROM foodcategories";
+        try (Connection conn = KioskDatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+
+            while(rs.next()){
+                categories.add(rs.getString("name"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return categories;
+    }
+
 }
