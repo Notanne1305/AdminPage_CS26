@@ -143,5 +143,7 @@ public class ProductController implements Initializable {
         categoryBox.getItems().addAll(categoryDao.getAllCategoryNames());
 
 
+
+
     }
 }
