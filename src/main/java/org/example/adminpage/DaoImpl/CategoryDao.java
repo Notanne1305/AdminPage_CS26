@@ -76,5 +76,19 @@ public class CategoryDao {
         }
         return categories;
     }
+    public int getCategoryId(String categoryName){
+        String sql = "SELECT category_id FROM foodcategories WHERE name = ?";
+        try (Connection conn = KioskDatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, categoryName);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("category_id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
 
 }

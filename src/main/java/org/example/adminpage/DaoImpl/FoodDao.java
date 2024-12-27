@@ -39,4 +39,19 @@ public class FoodDao {
 
         return foods;
     }
+
+    public void addFood(Food food) {
+        String sql = "INSERT INTO foods(name, price, category_id, img_src, stock) VALUES (?, ?, ?, ?, ?)";
+        try (Connection conn = KioskDatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, food.getName());
+            stmt.setBigDecimal(2, food.getPrice());
+            stmt.setInt(3, food.getCategoryId());
+            stmt.setString(4, food.getImgSrc());
+            stmt.setInt(5, food.getStock());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

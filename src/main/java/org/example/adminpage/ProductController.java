@@ -18,9 +18,12 @@ import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.adminpage.DaoImpl.CategoryDao;
+import org.example.adminpage.DaoImpl.FoodDao;
+import org.example.adminpage.Model.Food;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -56,6 +59,9 @@ public class ProductController implements Initializable {
 
     @FXML
     private Label priceLabel;
+
+    @FXML
+    private TextField stockField;
 
     @FXML
     void handleBackDashboard(ActionEvent event) {
@@ -110,6 +116,7 @@ public class ProductController implements Initializable {
 
     private CategoryDao categoryDao;
     private File file;
+    private FoodDao foodDao;
 
     //TODO: Implement every edge case in this page.
 
@@ -122,8 +129,27 @@ public class ProductController implements Initializable {
     }
 
     public void saveBTN(){
-        if(nameField.getText().isEmpty() || priceField.getText().isEmpty()) {
+        if(nameField.getText().isEmpty() || priceField.getText().isEmpty() || stockField.getText().isEmpty()) {
             showError("Please fill in all fields");
+        }else if(categoryBox.getValue() == null) {
+            showError("Please select a category");
+        }else if(file == null) {
+            showError("Please select an image");
+        }else if(!stockField.getText().matches("[0-9]+")){
+            showError("Please enter a valid stock number");
+        }else{
+            saveImage(file, "C:/Users/Sean Rommel E/Documents/Back Up Codes/VDatabase/src/main/resources/pic_resources/new/" + file.getName());
+
+            Food food = new Food();
+            food.setCategoryId(categoryDao.getCategoryId(categoryBox.getValue()));
+            food.setName(nameField.getText());
+            food.setPrice(BigDecimal.valueOf(Integer.parseInt(priceField.getText())));
+            food.setStock(Integer.parseInt(stockField.getText()));
+            food.setImgSrc("C:/Users/Sean Rommel E/Documents/Back Up Codes/VDatabase/src/main/resources/pic_resources/new/"+file.getName());
+
+            foodDao.addFood(food);
+            showError("Product added successfully");
+
         }
 
     }
@@ -152,7 +178,7 @@ public class ProductController implements Initializable {
         if(file != null){
             img.setImage(new javafx.scene.image.Image(file.toURI().toString()));
             nameLabel.setText(nameField.getText());
-            priceLabel.setText(priceField.getText());
+            priceLabel.setText("₱ " + priceField.getText());
             System.out.println(categoryBox.getValue());
         }else{
             showError("Please select an image");
@@ -171,6 +197,7 @@ public class ProductController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        foodDao = new FoodDao();
         categoryDao = new CategoryDao();
         categoryBox.getItems().addAll(categoryDao.getAllCategoryNames());
 
