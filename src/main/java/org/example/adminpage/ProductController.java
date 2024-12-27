@@ -15,10 +15,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.adminpage.DaoImpl.CategoryDao;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -103,6 +109,7 @@ public class ProductController implements Initializable {
     private ComboBox<String> categoryBox;
 
     private CategoryDao categoryDao;
+    private File file;
 
     //TODO: Implement every edge case in this page.
 
@@ -136,6 +143,31 @@ public class ProductController implements Initializable {
 
     }
 
+    public void setImage(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg")
+        );
+        file = fileChooser.showOpenDialog(null);
+        if(file != null){
+            img.setImage(new javafx.scene.image.Image(file.toURI().toString()));
+            nameLabel.setText(nameField.getText());
+            priceLabel.setText(priceField.getText());
+            System.out.println(categoryBox.getValue());
+        }else{
+            showError("Please select an image");
+        }
+    }
+
+    private void saveImage(File sourceFile, String destinationPath) {
+        try {
+            Files.copy(sourceFile.toPath(), Path.of(destinationPath), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Image saved to: " + destinationPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            showError("Failed to save image");
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
