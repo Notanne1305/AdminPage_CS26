@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Launcher extends Application {
 
-    private Stage primaryStage; // Declare a reference to the primary stage
+    private Stage primaryStage;
 
     @Override
     public void start(Stage stage) throws IOException {
