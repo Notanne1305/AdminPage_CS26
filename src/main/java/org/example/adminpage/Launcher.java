@@ -28,7 +28,7 @@ public class Launcher extends Application {
         stage.show();
 
 
-        //TODO: I don't know pa
+        //TODO: I don't know pa, I have no clue, maybe we should learn a new language na?
     }
 
 
