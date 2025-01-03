@@ -28,7 +28,7 @@ public class Launcher extends Application {
         stage.show();
 
 
-        //TODO: I don't know pa, I have no clue, maybe we should learn a new language na? I'll be learning web dev nalang for now. For i in range(20,1) {print("I don't know pa, I have no clue, maybe we should learn a new language na? I'll be learning web dev nalang for now.")}
+        //TODO: I don't know pa, I have no clue, maybe we should learn a new language na? I'll be learning web dev nalang for now. For i in range(20,1) {print("I don't know pa, I have no clue, maybe we should learn a new language na? I'll be learning web dev nalang for now.")}....
     }
 
 
